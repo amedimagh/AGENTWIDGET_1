@@ -37,6 +37,7 @@ function searchLastMessage(){
   const response =  document.getElementById('search-by-msg-response');
   const searchString = document.getElementById('search-by-msg-string');
   const customerMessages = [];
+  var LastcustomerMessage = "";
   var t ="";
   lpTag.agentSDK.init();
   
@@ -48,9 +49,11 @@ function searchLastMessage(){
     value.forEach( elem => {
       if(elem.source == 'visitor') {
         customerMessages.push(elem.text);
+        LastcustomerMessage= customerMessages[customerMessages.length - 1];
       }
     });
     console.log("customer messages: ",customerMessages);
+    console.log("LastcustomerMessage: ",LastcustomerMessage);
   };
 
 
