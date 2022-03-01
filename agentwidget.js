@@ -42,6 +42,7 @@ function searchLastMessage(){
   
   var updateCallback = function(data) {
     var value = data.newValue;
+  console.log('update call back Value : ', value);
     value.forEach( elem => {
       if(elem.source == 'visitor') {
         customerMessages.push(elem.text);
