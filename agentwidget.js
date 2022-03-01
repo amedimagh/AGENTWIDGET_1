@@ -67,6 +67,7 @@ function searchLastMessage(){
     
     setTimeout(function () {
       // do what you want
+         const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=1e420c2d&t=' ;
           searchString.innerText = "Search String: "+ customerMessages[customerMessages.length - 1];
           t = customerMessages[customerMessages.length - 1];
           fetch(url+t)
