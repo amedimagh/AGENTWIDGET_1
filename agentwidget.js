@@ -41,7 +41,9 @@ function searchLastMessage(){
   lpTag.agentSDK.init();
   
   var updateCallback = function(data) {
+    var path = data.key;
     var value = data.newValue;
+  console.log('update call back Path : ', value);
   console.log('update call back Value : ', value);
     value.forEach( elem => {
       if(elem.source == 'visitor') {
