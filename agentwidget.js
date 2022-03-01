@@ -69,11 +69,16 @@ function searchLastMessage(){
       // do what you want
          const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=1e420c2d&t=' ;
           searchString.innerText = "Search String: "+ customerMessages[customerMessages.length - 1];
+           console.log("Search string:" , searchString)
+           
           t = customerMessages[customerMessages.length - 1];
+           console.log("tttttttttt:" , t)
+        
+        
           fetch(url+t)
            .then(res => res.json())
               .then((out) => {
-                  //console.log('Output: ', out);
+                  console.log('Output: ', out);
                   response.innerText = 'Search by Message Response: '+JSON.stringify(out);
               
               }).catch(err => errorTxt.innerText = err);
