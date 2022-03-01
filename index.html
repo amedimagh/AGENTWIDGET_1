@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agentwidget</title>
+    <script type="text/javascript" src="agentwidget.js"></script>
+    <script type="text/javascript" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+
+</head>
+<body>
+
+
+
+
+    <div id ="error"> </div>
+    <div id ="agentWidget">
+        <form class="well form-search" id="search-by-title-form" onsubmit="return false;">
+
+        <fieldset>
+            <legend>Search a movie </legend>
+        
+            <input type="text" id="moviename" name="moviename" required>
+
+        
+        
+         
+            <button id="search-by-title-reset" type="reset"  onclick="resetValues();">Reset</button>
+          <button id="moviename" type="button" onclick="searchMovieName();">Search by movie's name</button>
+          <button id="search-by-last-msg" type="button"  onclick="searchLastMessage();">Search by Last Message</button>
+          
+
+          <div id="movieresult">
+
+          <p>Response:</p>
+
+
+        <div id="search-by-msg-string">
+            <p>Search by Message String:</p>
+            
+        </div>
+        <div id="search-by-msg-response">
+            <p>Search by Message Response:</p>
+            
+        </div>
+
+    </fieldset>
+
+</form>
+     </div>
+
+
+
+
+</body>
+</html>
